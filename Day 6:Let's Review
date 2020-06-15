@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner ob=new Scanner(System.in);
+        int a,i;
+        String str,str1="",str2="";
+        a=ob.nextInt();ob.nextLine();
+        for(i=0;i<a;i++){
+            str=ob.nextLine();
+            for(int j=0;j<str.length();j++)
+            {
+                if(j%2==0)
+                str1+=str.charAt(j);
+                else
+                str2+=str.charAt(j);
+            }
+            System.out.print(str1+" "+str2+"\n");
+            str1="";
+            str2="";
+           
+        }
+    }
+}
