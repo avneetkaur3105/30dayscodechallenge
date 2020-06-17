@@ -1,0 +1,35 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <map>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    std::map<string,string>phonebook;
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        string phone;
+        string name;
+        cin>>name;
+        cin>>phone;
+        phonebook[name]=phone;
+    }   
+    std::map<string,string>::iterator it;
+    string query;
+    while( cin >> query ){
+        it = phonebook.find(query);
+        
+        if ( it != phonebook.end() ){   //key found
+            cout << it->first << "=" << it->second << '\n';
+        }
+        else{
+            cout << "Not found" << '\n';
+        }
+    }
+    return 0;
+}
