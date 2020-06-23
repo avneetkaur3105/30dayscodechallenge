@@ -1,0 +1,11 @@
+
+    Difference(int[] elements){
+        this.elements=elements;
+    }
+    void computeDifference(){
+        Arrays.sort(elements);
+        int l=elements.length;
+        this.maximumDifference=Math.abs(elements[l-1]-elements[0]);
+    }
+	// Add your code here
+
